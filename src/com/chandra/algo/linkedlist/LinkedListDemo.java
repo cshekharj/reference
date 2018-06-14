@@ -57,13 +57,13 @@ public class LinkedListDemo{
 				head = newNode;
 			}
 			else{
-				for(int i=0;head.next != null;i++){
+				Node temp=head;
+				for(int i=0;temp.next != null;i++){
 					System.out.print("i -"+i);
-					System.out.println(" head.data "+head.data);
-					head=head.next;
-					
+					System.out.println(" temp.data "+temp.data);
+					temp=temp.next;
 				}
-				head.next=newNode;
+				temp.next=newNode;
 			}
 		}
 	 
@@ -146,13 +146,15 @@ public class LinkedListDemo{
 		    for(int i=0;i<10;i++)
 		    	dlist.insertNodeAfter(i+1);
 		    
-		    dlist.printList();
+		    //dlist.printList();
+		    ListUtil.printList(dlist.getHead());
 		    
 		    dlist.reverseList();
 		    //dlist.reverseListwithRecursion();
 		    
 		    
-		    dlist.printList();
+		    //dlist.printList();
+		    ListUtil.printList(dlist.getHead());
 		    //List<DemoLinkedList> circularLists ;
 		   /* while(dlist.getHead().next != null){
 		    	LinkedListDemo circularList = dlist.getCircularList();

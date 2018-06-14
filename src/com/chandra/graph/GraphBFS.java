@@ -36,11 +36,10 @@ public class GraphBFS {
 		return neighbours;
 	}
 	  
-	public void bfs(int adjacency_matrix[][], Node node) {
+	public void breathFirstSearch(int adjacency_matrix[][], Node node) {
 		queue.add(node);
 		node.visited = true;
 		while (!queue.isEmpty()) {
-
 			Node element = queue.remove();
 			System.out.print(element.data + "\t");
 			ArrayList<Node> neighbours = findNeighbours(adjacency_matrix, element);
@@ -84,7 +83,7 @@ public class GraphBFS {
 		};
 		
 		GraphBFS bfs = new GraphBFS(queue);
-		bfs.bfs(adjacency_matrix, node30);
+		bfs.breathFirstSearch(adjacency_matrix, node30);
 	}
 
 }
