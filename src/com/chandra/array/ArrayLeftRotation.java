@@ -4,16 +4,13 @@ import java.util.Scanner;
 
 import com.chandra.util.Utility;
 
-public class RotateArrayDemo {
+public class ArrayLeftRotation {
 
-    public static int[] arrayLeftRotation(int[] a, int n, int k) {
+    public static int[] rotateArrayLeft(int[] a, int n) {
     	
 		for(int num=0;num<n;num++){
-    		int tmp =0;
-    		int last = a[a.length-1];
-        	int first = a[0];
+    		int first = a[0];
 			for (int i=0,j=i+1;i<a.length-1;i++,j++){
-				tmp = a[i];
 				a[i] = a[j];
 			}
 			a[a.length-1]=first;
@@ -33,7 +30,7 @@ public class RotateArrayDemo {
         System.out.println("Array before Operation");
         Utility.printArray(a);
         
-        int[] output = arrayLeftRotation(a, k, k);
+        int[] output = rotateArrayLeft(a, k);
         System.out.println("Array after Operation");
         Utility.printArray(output);
       

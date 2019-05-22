@@ -6,7 +6,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class ArrayLeftRotation {
 
     public static int[] arrayLeftRotation(int[] a, int n, int k) {
 		return a;
