@@ -1,4 +1,4 @@
-package com.chandra.algo;
+package com.chandra.algo.ds;
 
 public class BinarySearchTree {
 
@@ -175,6 +175,22 @@ public class BinarySearchTree {
 
 	}
 	
+	
+	public int getHeight(Node root2) {
+
+	if (root2 == null)
+		return 0;
+	
+	System.out.println("Roo node data-"+root2.key);
+	
+	int leftlength = getHeight(root2.left);
+	int rightlenght = getHeight(root2.right);
+	if (leftlength > rightlenght)
+		return leftlength+1;
+	else
+		return rightlenght+1;
+	}
+	
 	public static boolean isBST(Node root){
 		Node prev=null;
 		
@@ -224,6 +240,8 @@ public class BinarySearchTree {
 		System.out.println("\nNode with the key 75");
 
 		System.out.println(theTree.findNode(75));
+		
+		System.out.println("Height of the BST-"+theTree.getHeight(root));
 
 	}
 

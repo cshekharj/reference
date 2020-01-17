@@ -17,7 +17,7 @@ public class Addition {
 		int[] array1 = {1,2,3};
 		Addition addition = new Addition();
 		addition.addNumbers(array1, array2);
-		//addition.addNums(array1, array2);
+		addition.addNums(array1, array2);
 		
 	}
 	

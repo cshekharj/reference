@@ -30,20 +30,20 @@ public class GraphDFS {
 	}
 
 	// Recursive DFS
-	public void dfs(int adjacency_matrix[][], Node node) {
+	public void depthFirstSearch(int adjacency_matrix[][], Node node) {
 		System.out.print(node.data + "\t");
 		ArrayList<Node> neighbours = findNeighbours(adjacency_matrix, node);
 		for (int i = 0; i < neighbours.size(); i++) {
 			Node n = neighbours.get(i);
 			if (n != null && !n.visited) {
-				dfs(adjacency_matrix, n);
+				depthFirstSearch(adjacency_matrix, n);
 				n.visited = true;
 			}
 		}
 	}
 
 	// Iterative DFS using stack
-	public void dfsUsingStack(int adjacency_matrix[][], Node node) {
+	public void depthFirstSearchStack(int adjacency_matrix[][], Node node) {
 		Stack<Node> stack = new Stack<Node>();
 		stack.add(node);
 		node.visited = true;
@@ -89,11 +89,11 @@ public class GraphDFS {
 		                  			};
 		GraphDFS dfsExample = new GraphDFS();
 		System.out.println("The DFS traversal of the graph using stack ");
-		dfsExample.dfsUsingStack(adjacency_matrix, node40);
+		dfsExample.depthFirstSearchStack(adjacency_matrix, node40);
 		System.out.println();
 		clearVisitedFlags();
 		System.out.println("The DFS traversal of the graph using recursion ");
-		dfsExample.dfs(adjacency_matrix, node40);
+		dfsExample.depthFirstSearch(adjacency_matrix, node40);
 	}
 
 	public static void clearVisitedFlags() {
