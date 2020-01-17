@@ -26,13 +26,12 @@ public class Anagram {
        for(String str:l){
     	   System.out.println("word-"+str);
        }
-
+       s.close();
         } 
     catch (Exception e) {
             System.out.println(e);
             System.exit(1);
         }
-
     }
 
     private static String sorting(String s) {

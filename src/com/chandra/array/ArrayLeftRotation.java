@@ -33,7 +33,7 @@ public class ArrayLeftRotation {
         int[] output = rotateArrayLeft(a, k);
         System.out.println("Array after Operation");
         Utility.printArray(output);
-      
+        in.close();
     }
 }
 

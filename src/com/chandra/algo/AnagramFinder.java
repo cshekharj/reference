@@ -42,7 +42,7 @@ public class AnagramFinder {
 			}
 			
 			for(Entry entry:wordMap.entrySet()){
-				if(((List) entry.getValue()).size()>1)
+				if(((List<String>) entry.getValue()).size()>1)
 					
 					System.out.println("Word - "+entry.getKey().toString()+" <---> "+"Count-"+ entry.getValue());
 			}
